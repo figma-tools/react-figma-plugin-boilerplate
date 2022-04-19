@@ -1,0 +1,47 @@
+{
+  "name": "figma-plugin",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "yarn dev:ui & yarn dev:plugin",
+    "dev:ui": "webpack serve --mode=development",
+    "dev:plugin": "webpack --watch --config webpack.plugin.config.ts",
+    "build": "webpack --mode=production"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@figma-plugin/helpers": "^0.15.2",
+    "@pmmmwh/react-refresh-webpack-plugin": "0.5.5",
+    "@types/figma": "^1.0.4",
+    "@types/node": "^17.0.25",
+    "@types/react": "^18.0.5",
+    "@types/react-dom": "^18.0.1",
+    "@types/webpack-dev-server": "^4.7.2",
+    "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
+    "express": "^4.17.3",
+    "html-webpack-inline-source-plugin": "^1.0.0-beta.2",
+    "html-webpack-plugin": "^5.5.0",
+    "react-figma": "^0.24.0",
+    "react-refresh": "^0.12.0",
+    "style-loader": "^3.3.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.39.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "5.8.0",
+    "ws": "^8.5.0"
+  },
+  "dependencies": {
+    "figma-jsonrpc": "^0.4.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "styled-components": "5.3.5"
+  }
+}
