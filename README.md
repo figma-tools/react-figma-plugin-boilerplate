@@ -19,3 +19,11 @@ In development, a separate server is run outside of the Figma plugin which allow
 http://localhost:9000//ui.html
 
 Please note, there's a bug right now in the web socket server where it will get stuck and not end the process correctly. [This is a quick guide](https://code2care.org/2015/how-to-kill-service-running-on-port-using-terminal-command) to kill the running port if that happens.
+
+## Acknowledgements
+
+Thank you to the following resources for providing inspiration for this library:
+
+[react-figma boilerplate](https://github.com/react-figma/react-figma-boilerplate)
+
+[How to build Figma plugins 10x faster](https://www.dittowords.com/blog/how-to-build-figma-plugins-10x-faster)
