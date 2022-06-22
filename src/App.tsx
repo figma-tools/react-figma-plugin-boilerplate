@@ -1,27 +1,12 @@
 import * as React from 'react'
+import { usePluginData } from './hooks'
 
 export function App() {
-  const [colors, setColors] = React.useState([])
-
-  React.useEffect(() => {
-    /** Listen to events from the plugin */
-    function handleMessage(event) {
-      if (event.data.pluginId) {
-        const { data } = event.data.pluginMessage
-        setColors(data)
-      }
-    }
-
-    parent.postMessage({ pluginMessage: { type: 'fetch-colors' } }, '*')
-
-    window.addEventListener('message', handleMessage)
-    return () => {
-      window.removeEventListener('message', handleMessage)
-    }
-  }, [])
+  const { colors } = usePluginData('colors', { colors: {} })
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <h1>Colors</h1>
       {Object.entries(colors).map(([name, data]) => (
         <div key={name} style={{ display: 'flex', padding: 8, gap: 16 }}>
           <div
