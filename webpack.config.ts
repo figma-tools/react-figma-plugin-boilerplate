@@ -87,12 +87,10 @@ export default (env, argv) => {
             ui: './src/ui.tsx',
           },
     devServer: {
-      contentBase: distPath,
+      static: distPath,
       compress: true,
       // open: true,
       // openPage: '/ui.html',
-      hot: true,
-      inline: true,
       historyApiFallback: true,
       port: 9000,
     },
