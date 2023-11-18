@@ -7,7 +7,8 @@ Boilerplate for easily getting started building custom Figma plugins with React 
 Run Development Server:
 
 ```bash
-yarn dev
+pnpm install
+pnpm dev
 ```
 
 Open and run the plugin in a local Figma environment:
